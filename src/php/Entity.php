@@ -22,12 +22,12 @@ class Entity
 
         $this->bank = $data['BANK'];
         $this->branch = $data['BRANCH'];
-        $this->address = $data['ADDRESS'];
-        $this->contact = $data['CONTACT'];
-        $this->city = $data['CITY'];
+        $this->address = $data['ADDRESS'] ?? "";
+        $this->contact = $data['CONTACT'] ?? "";
+        $this->city = $data['CITY'] ?? "";
         $this->code = $this->ifsc = $data['IFSC'];
-        $this->district = $data['DISTRICT'];
-        $this->state = $data['STATE'];
+        $this->district = $data['DISTRICT'] ?? "";
+        $this->state = $data['STATE'] ?? "";
 
         $this->bankCode = $this->getBankCode();
     }
